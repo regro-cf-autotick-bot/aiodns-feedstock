@@ -1,5 +1,5 @@
 {% set name = "aiodns" %}
-{% set version = "2.0.0" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 815fdef4607474295d68da46978a54481dd1e7be153c7d60f9e72773cd38d77d
+  sha256: 946bdfabe743fceeeb093c8a010f5d1645f708a241be849e17edfb0e49e08cd6
 
 build:
   noarch: python
-  number: 3
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -20,8 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - pycares >=3.0.0
-    - typing
+    - pycares >=4.0.0
 
 test:
   imports:
@@ -36,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Simple DNS resolver for asyncio'
+  summary: Simple DNS resolver for asyncio
   description: |
     aiodns provides a simple way for doing asynchronous DNS resolutions using
     pycares.
