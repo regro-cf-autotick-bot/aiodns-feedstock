@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - pycares >=3.0.0
+    - pycares >=4.0.0
 
 test:
   imports:
