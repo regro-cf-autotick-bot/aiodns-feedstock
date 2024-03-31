@@ -1,5 +1,5 @@
 {% set name = "aiodns" %}
-{% set version = "3.0.0" %}
+{% set version = "3.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 946bdfabe743fceeeb093c8a010f5d1645f708a241be849e17edfb0e49e08cd6
+  sha256: 62869b23409349c21b072883ec8998316b234c9a9e36675756e8e317e8768f72
 
 build:
   noarch: python
